@@ -1,0 +1,208 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- TemplateBeginEditable name="doctitle" -->
+<title>Organic Food</title>
+<!-- TemplateEndEditable -->
+<link href="../css/bootstrap-4.3.1.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="../css/font-awesome.min.css" type="text/css">
+	<link  rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="../css/main-styleHV.css" type="text/css">
+	<link rel="stylesheet" href="../css/shop.css" type="text/css">
+<!-- TemplateBeginEditable name="head" -->
+<!-- TemplateEndEditable -->
+</head>
+
+<body>
+	<div class="modal fade" id="shoppingCart">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Giỏ hàng</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="cart-row d-flex">
+			  <span class="cart-item cart-header cart-column">ITEM</span>
+			  <span class="cart-price cart-header cart-column">PRICE</span> 
+			  <span class="cart-quantity cart-header cart-column">QUANTITY</span> 
+			</div>
+          <div class="cart-items"> </div>
+          <div class="cart-total"> <strong class="cart-total-title">Total</strong><span> $</span> <span class="cart-total-price text-danger">0</span> </div>
+          <button class="btn btn-primary btn-purchase" type="button" onClick="thanhtoan()">Thanh toán</button>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="modal fade" id="serModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Tìm kiếm</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+				<div class="modal-body">
+					<form action="#" class="form-inline">
+						<input type="text" class="form-control form-control-lg w-75 mr-2 " placeholder="search here">
+						<button type="submit" class="btn btn-warning btn-lg">Tìm kiếm</button>
+					</form>
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Đóng</button>
+				</div>
+		
+		   </div>
+		</div>	
+	</div><!-- hết modal tim kiem-->
+<div class="modal" id="loginModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">ĐĂNG NHẬP</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+				<div class="modal-body">
+				 <form>
+					<div class="form-group"> <input type="email" class="form-control" placeholder="Enter email" id="form9"> </div>
+					<div class="form-group mb-3"> <input type="password" class="form-control" placeholder="Password" id="form10">
+						<small class="form-text text-muted text-right">	<a href="#"> Recover password</a><br>
+					 
+					 chưa có tài khoản, </small> <a href="#signUpModal" data-toggle="modal"> HÃY ĐĂNG KÝ</a>
+					 
+				   </div> <button type="submit" class="btn btn-primary">Submit</button>
+         		 </form>
+						
+				
+			  </div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Đóng</button>
+				</div>
+		
+		   </div>
+		</div>	
+	</div>
+	<!-- hết login popup-->
+<div class="modal" id="signUpModal">
+		<div class="modal-dialog modal-md">
+			<div class="modal-content px-5">
+				<div class="modal-header">
+					<h4 class="modal-title">ĐĂNG KÝ TÀI KHOẢN</h4>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+				</div>
+				
+				<div class="modal-body ">
+				
+				  <p class="mb-3">When, while the lovely valley teems with vapour around me, and the meridian sun strikes the upper surface of the impenetrable foliage of my trees.</p>
+          <form class="text-left">
+            <div class="form-group"> <label for="form16">Your Name</label> <input type="text" class="form-control" id="form16" placeholder="Johann W. Goethe"> </div>
+            <div class="form-group"> <label for="form17">Your Company</label> <input type="text" class="form-control" id="form17" placeholder="Werther Inc."> </div>
+            <div class="form-group"> <label for="form18">Your email</label> <input type="email" class="form-control" id="form18" placeholder="j.goethe@werther.com"> </div>
+            <div class="form-row">
+              <div class="form-group col-md-6"> <label for="form19">Password</label> <input type="password" class="form-control" id="form19" placeholder="••••"> </div>
+              <div class="form-group col-md-6"> <label for="form20">Confirm Password</label> <input type="password" class="form-control" id="form20" placeholder="••••"> </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check"> <input class="form-check-input" type="checkbox" id="form21" value="on"> <label class="form-check-label" for="form21"> I Agree with <a href="#">Term and Conditions</a> of the service </label> </div>
+            </div> <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+				
+				</div>
+				
+				<div class="modal-footer">
+					<button type="button" class="btn btn-success" data-dismiss="modal">Đóng</button>
+				</div>
+		
+		   </div>
+		</div>	
+	</div>
+	
+	
+	
+<div class="w-100 text-center py-2">
+	<a href="../index.html"> <img src="../img/logo.png"></a>		</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top"> 
+	<div class="container-fluid">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" > <span class="navbar-toggler-icon"></span> </button>
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+	    <ul class="navbar-nav mx-auto">
+	      <li class="nav-item active"> <a class="nav-link" href="../index.html">Trang chủ<span class="sr-only">(current)</span></a> </li>
+	      <li class="nav-item"> <a class="nav-link" href="../gioithieu.html">Giới thiệu</a> </li>
+	      <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sản phẩm</a>
+	        <div class="dropdown-menu bg-primary" aria-labelledby="navbarDropdown1">
+				<a class="dropdown-item" href="../rau-cu.html">Rau củ tươi Organic</a> 
+				<a class="dropdown-item" href="../trai-cay.html">Trái cây sạch organic</a>
+	          <a class="dropdown-item" href="../cac-loai-hat.html">Các Loại Hạt, Ngũ Cốc</a> 
+	          <a class="dropdown-item" href="../thit-an-toan.html">Thịt sạch an toàn</a> </div>
+          </li>
+	      <li class="nav-item"> <a class="nav-link" href="../blog.html">Blog</a> </li>
+			 <li class="nav-item"> <a class="nav-link" href="#">Phuong thuc thanh toan</a> </li>
+		  <li class="nav-item"> <a class="nav-link" href="../huong-dan-mua-hang.html">Hướng dẫn mua hàng</a> </li>
+		<li class="nav-item"> <a class="nav-link" href="../lien-he.html">Liên hệ</a> </li>
+        </ul>
+	    <div class="navbar-text">
+		<a href="#loginModal" data-toggle="modal"><span class="fa fa-user-circle fa-lg"></span></a>	
+		<a href="#shoppingCart" data-toggle="modal">
+					<span class="fa fa-shopping-cart fa-lg mx-2"></span>
+				  <span class="badge badge-warning" id="sl">0</span>
+			</a>
+		
+		<a href="#serModal" data-toggle="modal"><span class="fa fa-search fa-lg mx-2"></span></a> 
+	</div>
+</div>
+  </div>
+</nav>
+<!-- TemplateBeginEditable name="noidung" -->
+<main></main>
+<!-- TemplateEndEditable -->
+<footer class="py-5">
+	<div class="container">
+		<div class="row">
+		<div class="col-md-4 mt-5 mt-md-5 text-white pt-3">
+			<h3>SAIGON ORGANIC FOOD</h3>
+			<p>Organic Food farm cam kết chất lượng an toàn vệ sinh thực phẩm và khẳng định như vậy. Điều đó khẳng định sự tồn tại của chúng tôi. “Uy Tín” được Organic Food đặt lên hàng đầu, hợp tác, chia sẻ, tin cậy, … gắn bó lâu dài. </p>
+			</div>
+		<div class="col-md-4 mt-2 mt-md-5 text-white pt-3">
+			<h3>Địa chỉ</h3>
+			<p>19/12K, Ấp Thới Tứ, Xã Thới Tam Thôn, Huyện Hóc Môn<br>
+				Phone: 0865 222 9868<br></p>
+			<p class="mb-0"><b>Open Time:</b> <br>
+             <div class="ml-4 my-0">     Thứ 2-6    : 8:00- 20:00<br>
+				 
+                  Thứ 7-CN : 10:00-16:00. </div></p>
+			</div>
+		<div class="col-md-4 mt-2 mt-md-5  text-white pt-3">
+			<h3>Chi nhánh phân phối</h3>
+		<h5><strong>	 Tp Hồ Chí Minh:</strong></h5>
+			<p>19/12K, Ấp Thới Tứ, Xã Thới Tam Thôn, Huyện Hóc Môn</p>
+		<h5><strong>	 Tp Hà Nội:</strong></h5>
+	<p> A11, Ngõ 100, Đường Trung Kính, Phường Yên Hòa, Quận Cầu Giấy</p>
+
+
+
+		</div>
+		</div>
+		<div class="w-100">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.9072097266626!2d106.60590395010797!3d10.894656259941895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174d5ed041907b7%3A0xafdae36870a67434!2zOSwgMTJiIFThu5UgNDgg4bqlcCBUaOG7m2kgdOG7qSwgVGjhu5tpIFRhbSBUaMO0biwgSMOzYyBNw7RuLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1628332679214!5m2!1sen!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+		
+		</div>
+		</div>
+	</footer>
+<script src="../js/jquery-3.3.1.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap-4.3.1.js"></script>
+	<script src="../js/shop.js"></script>
+</body>
+</html>
